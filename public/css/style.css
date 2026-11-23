@@ -2428,519 +2428,110 @@ ul { list-style: none; }
 
    ========================================================= */
 
+
+/* =========================================================
+   RESPONSIVE HP - MAKSIMAL 480PX
+   HERO FLOATING CARD TETAP MUNCUL
+   ========================================================= */
+
 @media (max-width: 480px) {
 
-    :root { --navbar-h: 64px; }
+    :root {
+        --navbar-h: 64px;
+    }
 
-    .hero-image-wrapper { transform: none; }
+    .hero-image-wrapper {
+        transform: none;
+        position: relative;
+        overflow: visible !important;
+    }
 
     .features-grid {
-
         grid-template-columns: 1fr;
-
     }
 
     .steps-grid {
-
         grid-template-columns: 1fr;
-
     }
 
     .products-grid {
-
         grid-template-columns: 1fr;
-
     }
 
-    .product-image-wrapper { height: 320px; }
+    .product-image-wrapper {
+        height: 320px;
+    }
 
-    .hero-image-stage { max-width: 300px; aspect-ratio: 1 / 1; height: auto; border-radius: 30px; }
+    .hero-image-stage {
+        max-width: 300px;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        border-radius: 30px;
+    }
 
-    .hero-image-inner { border-radius: 20px; }
+    .hero-image-inner {
+        border-radius: 20px;
+    }
 
     .hero-image-wrapper::before {
-
         width: 290px;
-
         height: 340px;
-
     }
 
     .hero-image-wrapper::after {
-
         width: 210px;
-
     }
 
+    /* KARTU INFORMASI TETAP MUNCUL DI HP */
     .hero-floating-card {
+        display: flex !important;
+        position: absolute !important;
+        z-index: 10 !important;
 
-        display: none;
+        align-items: center;
+        gap: 8px;
 
+        max-width: 175px;
+        padding: 9px 11px;
+
+        white-space: normal;
+        border-radius: 14px;
+
+        transform: scale(0.85);
     }
 
-}
-
-/* =========================================================
-
-   FINAL FOOTER — NIRWANA FLORIST
-
-   ========================================================= */
-
-/* BACKGROUND FOOTER */
-
-.footer {
-
-    background: linear-gradient(180deg, #fff9f6 0%, #fdeff3 60%, #fff6ed 100%);
-
-    color: var(--clr-text);
-
-    border-top: 1px solid #f6dbe2;
-
-}
-
-/* SUSUNAN KOLOM */
-
-.footer-container {
-
-    max-width: 1500px;
-
-    grid-template-columns: 1.7fr 0.85fr 0.9fr 1.8fr;
-
-    gap: 45px;
-
-    padding: 70px 48px 55px;
-
-    align-items: start;
-
-}
-
-/* NAMA NIRWANA FLORIST */
-
-.footer-brand-name {
-
-    font-family: var(--ff-serif);
-
-    font-size: 2rem;
-
-    font-style: italic;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    color: var(--clr-primary-d);
-
-    margin-bottom: 22px;
-
-}
-
-/* DESKRIPSI */
-
-.footer-desc {
-
-    max-width: 520px;
-
-    color: var(--clr-text-2);
-
-    font-size: 1rem;
-
-    line-height: 1.75;
-
-}
-
-/* JUDUL KOLOM */
-
-.footer-links h3,
-
-.footer-social h3,
-
-.footer-location h3 {
-
-    font-family: var(--ff-sans);
-
-    font-size: 1.15rem;
-
-    font-weight: 800;
-
-    color: var(--clr-primary-d);
-
-    margin-bottom: 25px;
-
-}
-
-/* LINK CEPAT */
-
-.footer-links a {
-
-    color: var(--clr-text-2);
-
-    font-size: 1rem;
-
-    margin-bottom: 16px;
-
-    transition: color var(--transition);
-
-}
-
-.footer-links a:hover {
-
-    color: var(--clr-primary);
-
-}
-
-/* MEDIA SOSIAL */
-
-.footer-social-icons {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 18px;
-
-}
-
-.footer-social-icons a {
-
-    width: 64px;
-
-    height: 64px;
-
-    border: 1.5px solid var(--clr-primary);
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    color: var(--clr-primary);
-
-    background: rgba(255, 255, 255, 0.7);
-
-    transition: all var(--transition);
-
-}
-
-.footer-social-icons a svg {
-
-    width: 23px;
-
-    height: 23px;
-
-}
-
-.footer-social-icons a:hover {
-
-    background: linear-gradient(135deg, var(--clr-primary), #ebb39a);
-
-    border-color: transparent;
-
-    color: var(--clr-white);
-
-    transform: translateY(-4px);
-
-    box-shadow: 0 6px 18px rgba(217, 119, 142, 0.25);
-
-}
-
-/* ALAMAT */
-
-/* IKON LOKASI — CLEAN OUTLINE */
-
-.footer-address {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    color: var(--clr-text-2);
-
-    font-size: 1rem;
-
-    line-height: 1.5;
-
-    margin: 0 0 25px;
-
-}
-
-.footer-address svg {
-
-    width: 22px;
-
-    height: 22px;
-
-    min-width: 22px;
-
-    color: var(--clr-primary);
-
-    stroke: currentColor;
-
-    fill: none;
-
-    transition: transform 0.3s ease;
-
-}
-
-.footer-address:hover svg {
-
-    transform: translateY(-3px);
-
-}
-
-/* GOOGLE MAPS — UKURAN DIPERBESAR */
-
-.footer-map {
-
-    width: 100%;
-
-    height: 270px;
-
-    margin-top: 0;
-
-    overflow: hidden;
-
-    border-radius: 14px;
-
-    box-shadow: 0 5px 18px rgba(217, 119, 142, 0.16);
-
-    border: 1px solid rgba(217, 119, 142, 0.14);
-
-}
-
-.footer-map iframe {
-
-    display: block;
-
-    width: 100%;
-
-    max-width: none;
-
-    height: 100%;
-
-    border: 0;
-
-    border-radius: 14px;
-
-}
-
-/* COPYRIGHT */
-
-.footer-bottom {
-
-    border-top: 1px solid #f6dbe2;
-
-    color: var(--clr-text-2);
-
-    background: rgba(255, 250, 247, 0.85);
-
-}
-
-/* TABLET */
-
-@media (max-width: 1024px) {
-
-    .footer-container {
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 40px;
-
-        padding: 55px 35px;
-
+    /* KARTU DESAIN MENARIK */
+    .hero-floating-card.card-1 {
+        top: 8%;
+        left: -8px;
+        right: auto;
+        bottom: auto;
     }
 
-    .footer-brand {
-
-        grid-column: 1 / -1;
-
+    /* KARTU PENUH MAKNA */
+    .hero-floating-card.card-2 {
+        bottom: 8%;
+        right: -8px;
+        left: auto;
+        top: auto;
     }
 
-    .footer-map {
-
-        height: 250px;
-
+    /* IKON KARTU */
+    .hero-floating-card .card-icon {
+        font-size: 22px;
+        flex-shrink: 0;
     }
 
-}
-
-/* HP */
-
-@media (max-width: 768px) {
-
-    .footer-container {
-
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-
-        padding: 45px 24px;
-
+    /* JUDUL KARTU */
+    .hero-floating-card .card-text-main {
+        font-size: 12px;
+        line-height: 1.4;
     }
 
-    .footer-brand {
-
-        grid-column: auto;
-
+    /* DESKRIPSI KARTU */
+    .hero-floating-card .card-text-sub {
+        font-size: 10px;
+        line-height: 1.4;
     }
 
-    .footer-brand-name {
-
-        font-size: 1.75rem;
-
-    }
-
-    .footer-desc {
-
-        font-size: 0.92rem;
-
-    }
-
-    .footer-map {
-
-        height: 230px;
-
-    }
-
-    .footer-social-icons a {
-
-        width: 55px;
-
-        height: 55px;
-
-    }
-
-}
-
-/* =========================================================
-
-   PERBAIKAN POSISI KATALOG
-
-   BARIS PERTAMA 3 PRODUK
-
-   BARIS KEDUA 2 PRODUK DI TENGAH
-
-   ========================================================= */
-
-@media (min-width: 1025px) {
-
-    .catalog .products-grid {
-
-        display: grid;
-
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-
-        gap: 24px;
-
-    }
-
-    .catalog .products-grid .product-card {
-
-        grid-column: span 2;
-
-        width: 100%;
-
-        min-width: 0;
-
-    }
-
-    /* Produk ke-4 berada di tengah bagian kiri */
-
-    .catalog .products-grid .product-card:nth-child(4) {
-
-        grid-column: 2 / span 2;
-
-    }
-
-    /* Produk ke-5 berada di tengah bagian kanan */
-
-    .catalog .products-grid .product-card:nth-child(5) {
-
-        grid-column: 4 / span 2;
-
-    }
-
-}
-
-/* Tablet: tetap 2 kolom */
-
-@media (min-width: 601px) and (max-width: 1024px) {
-
-    .catalog .products-grid {
-
-        display: grid;
-
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        gap: 20px;
-
-    }
-
-    .catalog .products-grid .product-card {
-
-        grid-column: auto;
-
-    }
-
-}
-
-/* HP: tetap 1 kolom */
-
-@media (max-width: 600px) {
-
-    .catalog .products-grid {
-
-        display: grid;
-
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-
-    }
-
-    .catalog .products-grid .product-card {
-
-        grid-column: auto;
-
-    }
-
-}
-
-/* Hero alignment for medium screens */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .hero-image-wrapper { transform: none; }
-    .hero-image-stage { max-width: 420px; }
-    .hero-floating-card.card-1 { left: -20px; }
-    .hero-floating-card.card-2 { right: -20px; }
-}
-
-
-/* =====================================================
-   FIX FOTO MOMEN SPESIAL — TAMPILKAN FOTO UTUH
-   ===================================================== */
-
-.occasions-grid .occasion-card {
-    height: 380px !important;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff5ea;
-}
-
-.occasions-grid .occasion-card .occasion-img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-    transform: none !important;
-}
-
-.occasions-grid .occasion-card:hover .occasion-img {
-    transform: none !important;
 }
