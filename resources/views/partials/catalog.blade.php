@@ -1537,129 +1537,55 @@ ${informasiRekening}`;
    BAGIKAN FOTO DAN DETAIL PESANAN
 ========================================================== */
 
-async function kirimPesananCustom() {
+function kirimPesananCustom() {
 
-    // MEMASTIKAN FOTO SUDAH SIAP
-
+    // Pastikan foto sudah berhasil disiapkan
     if (gambarSedangDisiapkan) {
-
         alert('Mohon tunggu, foto produk sedang disiapkan.');
-
         return;
-
     }
 
     if (!fileGambarPesanan) {
-
         alert(
             'Foto produk belum berhasil disiapkan. ' +
             'Silakan tutup dan pilih kembali model papan bunga.'
         );
-
         return;
-
     }
 
-
-    // MEMBUAT PESAN DAN VALIDASI
-
+    // Buat pesan sekaligus validasi seluruh data pesanan
     const pesan = buatPesanPesanan();
-
     if (!pesan) return;
 
-
-    // NOMOR WHATSAPP ADMIN
-
+    // NOMOR WHATSAPP ADMIN NIRWANA FLORIST
+    // Gunakan format 62, tanpa tanda +, spasi, atau angka 0 di depan.
     const nomorWhatsApp = '62895629253800';
 
-
-    // MEMERIKSA DUKUNGAN BAGIKAN FILE
-
-    const mendukungBagikanFoto =
-
-        navigator.share &&
-
-        navigator.canShare &&
-
-        navigator.canShare({
-
-            files: [fileGambarPesanan]
-
-        });
-
-
-    if (mendukungBagikanFoto) {
-
-        try {
-
-            await navigator.share({
-
-                title: 'Pesanan Nirwana Florist',
-
-                text: pesan,
-
-                files: [fileGambarPesanan]
-
-            });
-
-            return;
-
-
-        } catch (error) {
-
-            if (error.name === 'AbortError') {
-
-                return;
-
-            }
-
-            console.error(
-                'Gagal membagikan foto:',
-                error
-            );
-
-            alert(
-                'Foto belum berhasil dibagikan. ' +
-                'Silakan coba kembali.'
-            );
-
-            return;
-
-        }
-
-    }
-
-
-    // ALTERNATIF JIKA PERANGKAT TIDAK MENDUKUNG
-    // WHATSAPP DIBUKA DENGAN DETAIL DAN LINK FOTO.
-
+    // Ambil alamat foto yang bisa diakses melalui website
     const modal = document.getElementById('customModal');
-
     const urlGambar = new URL(
         modal.dataset.modelGambar,
         window.location.origin
     ).href;
 
-    const pesanAlternatif = pesan +
+    // WhatsApp tidak mengizinkan website mengirim lampiran foto
+    // secara otomatis melalui link wa.me. Karena itu, sertakan
+    // tautan foto di dalam pesan agar admin dapat membukanya.
+    const pesanLengkap = pesan +
+        '\n\nFoto model papan bunga: ' + urlGambar;
 
-        '\n\nFoto model papan bunga:\n' +
-
-        urlGambar;
-
-
+    // Susun tautan WhatsApp dengan pesan yang sudah dienkode
     const urlWhatsApp =
+        'https://wa.me/' + nomorWhatsApp +
+        '?text=' + encodeURIComponent(pesanLengkap);
 
-        'https://wa.me/' +
+    // Buka WhatsApp pada tab baru
+    const jendelaWhatsApp = window.open(urlWhatsApp, '_blank');
 
-        nomorWhatsApp +
-
-        '?text=' +
-
-        encodeURIComponent(pesanAlternatif);
-
-
-    window.open(urlWhatsApp, '_blank');
-
+    // Jika browser memblokir tab baru, arahkan tab saat ini
+    if (!jendelaWhatsApp) {
+        window.location.href = urlWhatsApp;
+    }
 }
 
 </script>

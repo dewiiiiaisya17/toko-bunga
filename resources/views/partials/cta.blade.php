@@ -19,7 +19,7 @@
         </p>
 
         <a
-            href="https://wa.me/62895629253800?text=Halo%20Nirwana%20Florist!%20Saya%20ingin%20memesan%20karangan%20bunga."
+            href="https://wa.me/62895629253800?text=Halo%20Nirwana%20Florist%2C%20saya%20ingin%20memesan%20papan%20bunga.%0A%0ABerikut%20detail%20pemesanan%20saya%3A%0A%0AModel%20Papan%20Bunga%3A%0AHarga%3A%0AAcara%3A%0AUcapan%3A%0ANama%20Pengirim%3A%0ACatatan%20Tambahan%3A%0AAlamat%20Penerima%3A%0ANama%20Penerima%3A%0ANo.%20HP%20Penerima%3A%0A%0AMohon%20informasi%20lebih%20lanjut%20mengenai%20pemesanan%20ini.%20Terima%20kasih."
             target="_blank"
             rel="noopener noreferrer"
             class="btn-primary"

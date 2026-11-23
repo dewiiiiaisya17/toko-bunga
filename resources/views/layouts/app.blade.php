@@ -23,11 +23,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- CSS UTAMA -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=13">
 
@@ -75,61 +77,64 @@
 
             flex-shrink: 0 !important;
         }
-        
-/* EFEK ANIMASI TOMBOL WHATSAPP */
-body a.wa-floating {
-    position: fixed !important;
-    isolation: isolate;
-    animation: wa-gerak 2s ease-in-out infinite;
-}
 
-/* Lingkaran animasi di sekitar tombol */
-body a.wa-floating::before {
-    content: "";
-    position: absolute;
-    inset: -7px;
-    border: 2px solid rgba(37, 211, 102, 0.65);
-    border-radius: 50%;
-    z-index: -1;
-    animation: wa-pulse 1.8s ease-out infinite;
-}
+        /* EFEK ANIMASI TOMBOL WHATSAPP */
+        body a.wa-floating {
+            position: fixed !important;
+            isolation: isolate;
+            animation: wa-gerak 2s ease-in-out infinite;
+        }
 
-/* Gerakan ikon */
-body a.wa-floating svg {
-    animation: wa-icon 2s ease-in-out infinite;
-}
+        /* Lingkaran animasi di sekitar tombol */
+        body a.wa-floating::before {
+            content: "";
+            position: absolute;
+            inset: -7px;
+            border: 2px solid rgba(37, 211, 102, 0.65);
+            border-radius: 50%;
+            z-index: -1;
+            animation: wa-pulse 1.8s ease-out infinite;
+        }
 
-/* Tombol bergerak naik turun */
-@keyframes wa-gerak {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-}
+        /* Gerakan ikon */
+        body a.wa-floating svg {
+            animation: wa-icon 2s ease-in-out infinite;
+        }
 
-/* Efek lingkaran membesar */
-@keyframes wa-pulse {
-    0% {
-        transform: scale(0.9);
-        opacity: 0.8;
-    }
-    100% {
-        transform: scale(1.5);
-        opacity: 0;
-    }
-}
+        /* Tombol bergerak naik turun */
+        @keyframes wa-gerak {
+            0%, 100% {
+                transform: translateY(0);
+            }
 
-/* Ikon sedikit membesar dan mengecil */
-@keyframes wa-icon {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.12);
-    }
-}
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Efek lingkaran membesar */
+        @keyframes wa-pulse {
+            0% {
+                transform: scale(0.9);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Ikon sedikit membesar dan mengecil */
+        @keyframes wa-icon {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.12);
+            }
+        }
 
         /* Tampilan HP */
         @media (max-width: 768px) {
@@ -149,7 +154,6 @@ body a.wa-floating svg {
                 height: 25px !important;
             }
         }
-        
     </style>
 
 </head>
@@ -158,7 +162,6 @@ body a.wa-floating svg {
 
     <!-- KONTEN WEBSITE -->
     @yield('content')
-
 
     <!-- FLOATING WHATSAPP -->
     <a href="#"
@@ -179,10 +182,8 @@ body a.wa-floating svg {
         </svg>
     </a>
 
-
     <!-- JAVASCRIPT UTAMA -->
     <script src="{{ asset('js/app.js') }}"></script>
-
 
     <!-- PESAN WHATSAPP OTOMATIS -->
     <script>
@@ -192,21 +193,7 @@ body a.wa-floating svg {
 
             const nomorWA = '62895629253800';
 
-            const pesan = `Halo Nirwana Florist, saya ingin memesan papan bunga.
-
-Berikut detail pemesanan saya:
-
-Model Papan Bunga:
-Harga:
-Acara:
-Ucapan:
-Nama Pengirim:
-Catatan Tambahan:
-Alamat Penerima:
-Nama Penerima:
-No. HP Penerima:
-
-Mohon informasi lebih lanjut mengenai pemesanan ini. Terima kasih.`;
+            const pesan = `Halo Nirwana Florist! Saya ingin memesan karangan bunga.`;
 
             const linkWA = 'https://wa.me/' + nomorWA + '?text=' + encodeURIComponent(pesan);
 
