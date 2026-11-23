@@ -1,0 +1,630 @@
+
+/* =========================================================
+   NIRWANA FLORIST - STYLE CSS
+   ========================================================= */
+
+
+/* ==========================================
+   PENGATURAN DASAR WEBSITE
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+
+/* ==========================================
+   KATALOG PRODUK
+========================================== */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    overflow: hidden;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Bingkai foto papan bunga */
+.product-image-wrapper {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    background: #fff8f4;
+}
+
+.product-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.product-category {
+    color: #d86d91;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.product-name {
+    margin: 8px 0;
+    font-size: 20px;
+}
+
+.product-desc {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.price-from {
+    display: block;
+    color: #777;
+    font-size: 12px;
+}
+
+.price-value {
+    font-weight: bold;
+    color: #b95d7c;
+}
+
+.btn-order {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    background: #e9a3ba;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   KATALOG TABLET
+========================================== */
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .product-image-wrapper {
+        height: 320px;
+    }
+}
+
+
+/* ==========================================
+   KATALOG MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image-wrapper {
+        height: 350px;
+    }
+}
+
+
+/* ==========================================
+   FOOTER NIRWANA FLORIST
+========================================== */
+
+.footer {
+    background: #190b10;
+    color: #ffffff;
+    padding: 75px 0 20px;
+    width: 100%;
+}
+
+.footer .footer-container {
+    width: 85%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: grid !important;
+    grid-template-columns: 2fr 1fr 1fr 1.2fr !important;
+
+    grid-template-areas:
+        "brand links contact social";
+
+    gap: 45px;
+    align-items: start;
+}
+
+
+/* Posisi setiap kolom */
+.footer .footer-brand {
+    grid-area: brand !important;
+    min-width: 0;
+}
+
+.footer .footer-links {
+    grid-area: links !important;
+    min-width: 0;
+}
+
+.footer .footer-contact {
+    grid-area: contact !important;
+    min-width: 0;
+}
+
+.footer .footer-social {
+    grid-area: social !important;
+    min-width: 0;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+
+/* Logo */
+.footer .footer-logo {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+
+/* Nama brand */
+.footer .footer-brand-name {
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+
+/* Tagline */
+.footer .footer-tagline {
+    color: #e9a3ba;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 18px;
+}
+
+
+/* Deskripsi */
+.footer .footer-desc {
+    max-width: 380px;
+    color: #c5b9bd;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* Judul kolom */
+.footer .footer-links h3,
+.footer .footer-contact h3,
+.footer .footer-social h3 {
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 700;
+    margin: 5px 0 25px;
+}
+
+
+/* Link dan teks kontak */
+.footer .footer-links a,
+.footer .footer-contact a,
+.footer .footer-social a,
+.footer .footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: fit-content;
+    margin: 0 0 18px;
+
+    color: #c5b9bd;
+    font-size: 17px;
+    line-height: 1.6;
+    text-decoration: none;
+
+    transition: color 0.3s ease,
+                transform 0.3s ease;
+}
+
+
+/* Ikon footer */
+.footer .footer-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    min-width: 28px;
+
+    font-size: 22px;
+}
+
+
+/* Hover footer */
+.footer .footer-links a:hover,
+.footer .footer-contact a:hover,
+.footer .footer-social a:hover {
+    color: #e9a3ba;
+    transform: translateX(5px);
+}
+
+
+/* Footer bawah */
+.footer .footer-bottom {
+    width: 85%;
+    max-width: 1300px;
+    margin: 55px auto 0;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    text-align: center;
+}
+
+.footer .footer-bottom p {
+    color: #92858a;
+    font-size: 15px;
+    margin: 0;
+}
+
+
+/* ==========================================
+   FOOTER TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+    .footer .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        grid-template-areas:
+            "brand brand"
+            "links contact"
+            "social social";
+
+        gap: 35px;
+    }
+}
+
+
+/* ==========================================
+   FOOTER MOBILE
+========================================== */
+
+@media (max-width: 560px) {
+    .footer {
+        padding-top: 50px;
+    }
+
+    .footer .footer-container {
+        width: 88%;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        grid-template-areas:
+            "brand brand"
+            "links contact"
+            "social social";
+
+        gap: 28px 18px;
+    }
+
+    .footer .footer-brand-name {
+        font-size: 23px;
+    }
+
+    .footer .footer-desc {
+        font-size: 14px;
+    }
+
+    .footer .footer-links h3,
+    .footer .footer-contact h3,
+    .footer .footer-social h3 {
+        font-size: 17px;
+        margin-bottom: 17px;
+    }
+
+    .footer .footer-links a,
+    .footer .footer-contact a,
+    .footer .footer-social a,
+    .footer .footer-contact p {
+        font-size: 14px;
+        gap: 8px;
+        margin-bottom: 13px;
+    }
+
+    .footer .footer-icon {
+        font-size: 19px;
+        width: 23px;
+        min-width: 23px;
+    }
+
+    .footer .footer-bottom {
+        width: 88%;
+        margin-top: 35px;
+    }
+}
+
+
+/* =========================================
+   FLOATING WHATSAPP - NIRWANA FLORIST
+========================================= */
+
+body > a.wa-floating {
+    position: fixed !important;
+
+    right: 22px !important;
+    bottom: 22px !important;
+    top: auto !important;
+    left: auto !important;
+
+    width: 48px !important;
+    height: 48px !important;
+
+    min-width: 48px !important;
+    min-height: 48px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    float: none !important;
+
+    background: #25D366 !important;
+    color: #ffffff !important;
+
+    border: none !important;
+    border-radius: 50% !important;
+
+    text-decoration: none !important;
+
+    z-index: 999999 !important;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+
+    transition: background 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* Ukuran ikon WhatsApp */
+body > a.wa-floating svg {
+    display: block !important;
+
+    width: 25px !important;
+    height: 25px !important;
+
+    min-width: 25px !important;
+    max-width: 25px !important;
+
+    min-height: 25px !important;
+    max-height: 25px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    flex-shrink: 0 !important;
+}
+
+
+/* Hover WhatsApp */
+body > a.wa-floating:hover {
+    background: #20bd5a !important;
+    transform: scale(1.08);
+
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+}
+
+
+/* WhatsApp Mobile */
+@media (max-width: 480px) {
+    body > a.wa-floating {
+        right: 16px !important;
+        bottom: 16px !important;
+
+        width: 44px !important;
+        height: 44px !important;
+
+        min-width: 44px !important;
+        min-height: 44px !important;
+    }
+
+    body > a.wa-floating svg {
+        width: 23px !important;
+        height: 23px !important;
+
+        min-width: 23px !important;
+        max-width: 23px !important;
+
+        min-height: 23px !important;
+        max-height: 23px !important;
+    }
+}
+
+
+/* =====================================
+   FONT NIRWANA FLORIST
+===================================== */
+
+/* Font utama seluruh website */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Judul utama Hero */
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Tulisan yang diberi penekanan */
+.hero-title em {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+/* Deskripsi Hero */
+.hero-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* Tombol Hero */
+.hero-actions a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+/* ==========================================
+   PERBAIKAN HERO IMAGE NIRWANA FLORIST
+   FOTO MENYATU DENGAN BACKGROUND
+========================================== */
+
+/* Wrapper gambar */
+.hero .hero-container .hero-image-wrapper {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+}
+
+/* Mengecilkan logo utama */
+.hero .hero-container .hero-image-wrapper img#hero-main-img {
+    display: block !important;
+
+    width: 75% !important;
+    max-width: 380px !important;
+    height: auto !important;
+    max-height: 380px !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+
+    -webkit-mask-image: radial-gradient(
+        ellipse 75% 78% at center,
+        #000 45%,
+        rgba(0, 0, 0, 0.95) 58%,
+        rgba(0, 0, 0, 0.65) 72%,
+        rgba(0, 0, 0, 0.20) 88%,
+        transparent 100%
+    ) !important;
+
+    mask-image: radial-gradient(
+        ellipse 75% 78% at center,
+        #000 45%,
+        rgba(0, 0, 0, 0.95) 58%,
+        rgba(0, 0, 0, 0.65) 72%,
+        rgba(0, 0, 0, 0.20) 88%,
+        transparent 100%
+    ) !important;
+
+    transition: transform 0.4s ease !important;
+}
+
+.hero .hero-container .hero-image-wrapper img#hero-main-img:hover {
+    transform: scale(1.02);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .hero .hero-container .hero-image-wrapper img#hero-main-img {
+        width: 80% !important;
+        max-width: 340px !important;
+        max-height: none !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .hero .hero-container .hero-image-wrapper img#hero-main-img {
+        width: 85% !important;
+        max-width: 300px !important;
+    }
+}
+
+
+/* ==========================================
+   HERO LOGO - PENGATURAN UKURAN
+   ========================================== */
+
+.hero .hero-container .hero-image-wrapper img#hero-main-img {
+    display: block !important;
+    width: 220px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    margin: 0 auto !important;
+    transform: none !important;
+    transition: transform 0.4s ease !important;
+
+    -webkit-mask-image: radial-gradient(
+        ellipse 75% 78% at center,
+        #000 45%,
+        rgba(0, 0, 0, 0.95) 58%,
+        rgba(0, 0, 0, 0.65) 72%,
+        rgba(0, 0, 0, 0.20) 88%,
+        transparent 100%
+    ) !important;
+
+    mask-image: radial-gradient(
+        ellipse 75% 78% at center,
+        #000 45%,
+        rgba(0, 0, 0, 0.95) 58%,
+        rgba(0, 0, 0, 0.65) 72%,
+        rgba(0, 0, 0, 0.20) 88%,
+        transparent 100%
+    ) !important;
+}
+
+.hero .hero-container .hero-image-wrapper img#hero-main-img:hover {
+    transform: scale(1.02) !important;
+}
