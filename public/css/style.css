@@ -2917,3 +2917,30 @@ ul { list-style: none; }
     .hero-floating-card.card-1 { left: -20px; }
     .hero-floating-card.card-2 { right: -20px; }
 }
+
+
+/* =====================================================
+   FIX FOTO MOMEN SPESIAL — TAMPILKAN FOTO UTUH
+   ===================================================== */
+
+.occasions-grid .occasion-card {
+    height: 380px !important;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff5ea;
+}
+
+.occasions-grid .occasion-card .occasion-img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    transform: none !important;
+}
+
+.occasions-grid .occasion-card:hover .occasion-img {
+    transform: none !important;
+}
