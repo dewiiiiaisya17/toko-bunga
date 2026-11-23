@@ -2535,3 +2535,336 @@ ul { list-style: none; }
     }
 
 }
+
+/* ==============================================
+   FOOTER NIRWANA FLORIST - PERBAIKAN FINAL
+   Ukuran ikon stabil di Chrome dan Instagram
+============================================== */
+
+/* LAYOUT FOOTER DESKTOP */
+.footer-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 65px 48px 50px;
+
+    display: grid;
+    grid-template-columns:
+        minmax(250px, 1.25fr)
+        minmax(140px, 0.75fr)
+        minmax(250px, 1.35fr)
+        minmax(250px, 1.2fr);
+
+    gap: 35px;
+    align-items: start;
+}
+
+/* Mencegah kolom saling mendorong */
+.footer-brand,
+.footer-links,
+.footer-social,
+.footer-location {
+    min-width: 0;
+}
+
+/* ==============================================
+   IKON MEDIA SOSIAL
+============================================== */
+
+.footer .footer-social .footer-social-icons {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Lingkaran ikon */
+.footer .footer-social .footer-social-icons a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 48px !important;
+    height: 48px !important;
+
+    min-width: 48px !important;
+    min-height: 48px !important;
+
+    max-width: 48px !important;
+    max-height: 48px !important;
+
+    flex: 0 0 48px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+    border: 2px solid #e66f91 !important;
+    border-radius: 50% !important;
+
+    background: transparent !important;
+    color: #e66f91 !important;
+
+    text-decoration: none !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+
+    overflow: hidden !important;
+    transform: none;
+    transition: background 0.3s ease, color 0.3s ease !important;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Ikon SVG */
+.footer .footer-social .footer-social-icons a svg {
+    display: block !important;
+
+    width: 22px !important;
+    height: 22px !important;
+
+    min-width: 22px !important;
+    min-height: 22px !important;
+
+    max-width: 22px !important;
+    max-height: 22px !important;
+
+    flex: 0 0 22px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: inherit !important;
+    fill: none;
+}
+
+/* Ikon gambar */
+.footer .footer-social .footer-social-icons a img {
+    display: block !important;
+
+    width: 22px !important;
+    height: 22px !important;
+
+    min-width: 22px !important;
+    min-height: 22px !important;
+
+    max-width: 22px !important;
+    max-height: 22px !important;
+
+    object-fit: contain !important;
+    flex: 0 0 22px !important;
+}
+
+/* Ikon font */
+.footer .footer-social .footer-social-icons a i {
+    display: inline-block !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    width: 22px !important;
+    height: 22px !important;
+}
+
+/* Efek hover */
+.footer .footer-social .footer-social-icons a:hover {
+    background: #e66f91 !important;
+    color: #ffffff !important;
+    transform: translateY(-3px);
+}
+
+/* ==============================================
+   GOOGLE MAPS
+============================================== */
+
+.footer-map {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 22px;
+}
+
+.footer-map iframe {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 180px !important;
+
+    border: 0 !important;
+    border-radius: 10px !important;
+
+    box-shadow: 0 4px 15px rgba(217, 119, 142, 0.15);
+}
+
+/* ==============================================
+   TABLET
+============================================== */
+
+@media screen and (max-width: 1100px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px;
+        padding: 55px 35px 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-map iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* ==============================================
+   HP
+============================================== */
+
+@media screen and (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+        padding: 45px 24px 35px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    /* Ukuran lingkaran ikon di HP */
+    .footer .footer-social .footer-social-icons {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 12px !important;
+    }
+
+    .footer .footer-social .footer-social-icons a {
+        width: 44px !important;
+        height: 44px !important;
+
+        min-width: 44px !important;
+        min-height: 44px !important;
+
+        max-width: 44px !important;
+        max-height: 44px !important;
+
+        flex: 0 0 44px !important;
+
+        font-size: 20px !important;
+    }
+
+    .footer .footer-social .footer-social-icons a svg {
+        width: 20px !important;
+        height: 20px !important;
+
+        min-width: 20px !important;
+        min-height: 20px !important;
+
+        max-width: 20px !important;
+        max-height: 20px !important;
+
+        flex: 0 0 20px !important;
+    }
+
+    .footer .footer-social .footer-social-icons a img {
+        width: 20px !important;
+        height: 20px !important;
+
+        min-width: 20px !important;
+        min-height: 20px !important;
+
+        max-width: 20px !important;
+        max-height: 20px !important;
+    }
+
+    .footer .footer-social .footer-social-icons a i {
+        font-size: 20px !important;
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .footer-map iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 180px !important;
+    }
+
+    .footer-bottom {
+        padding: 20px 24px;
+    }
+}
+
+/* ==============================================
+   HP KECIL
+============================================== */
+
+@media screen and (max-width: 480px) {
+
+    .footer-container {
+        padding: 40px 20px 30px;
+        gap: 28px;
+    }
+
+    .footer .footer-social .footer-social-icons {
+        gap: 10px !important;
+    }
+
+    .footer .footer-social .footer-social-icons a {
+        width: 42px !important;
+        height: 42px !important;
+
+        min-width: 42px !important;
+        min-height: 42px !important;
+
+        max-width: 42px !important;
+        max-height: 42px !important;
+
+        flex: 0 0 42px !important;
+    }
+
+    .footer .footer-social .footer-social-icons a svg,
+    .footer .footer-social .footer-social-icons a img {
+        width: 19px !important;
+        height: 19px !important;
+
+        min-width: 19px !important;
+        min-height: 19px !important;
+
+        max-width: 19px !important;
+        max-height: 19px !important;
+
+        flex: 0 0 19px !important;
+    }
+
+    .footer .footer-social .footer-social-icons a i {
+        font-size: 19px !important;
+        width: 19px !important;
+        height: 19px !important;
+    }
+}
+/* ==============================================
+   PERBAIKAN IKON LOKASI FOOTER
+============================================== */
+
+.footer-location svg,
+.footer-location i,
+.footer-location img {
+    width: 24px !important;
+    height: 24px !important;
+    max-width: 24px !important;
+    max-height: 24px !important;
+    font-size: 24px !important;
+    flex: 0 0 24px !important;
+}
+
+/* Mencegah ikon lokasi membesar */
+.footer-location > a svg,
+.footer-location > p svg {
+    width: 20px !important;
+    height: 20px !important;
+}

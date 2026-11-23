@@ -31,7 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS UTAMA -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=13">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=14">
 
     <!-- CSS TOMBOL WHATSAPP FLOATING -->
     <style>

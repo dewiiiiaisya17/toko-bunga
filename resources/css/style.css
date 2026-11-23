@@ -628,3 +628,106 @@ body {
 .hero .hero-container .hero-image-wrapper img#hero-main-img:hover {
     transform: scale(1.02) !important;
 }
+
+/* ==========================================
+   FIX ICON MEDIA SOSIAL
+   NIRWANA FLORIST
+   OPTIMASI BROWSER INSTAGRAM
+========================================== */
+
+/* Container icon */
+.footer .footer-social .footer-social-icons {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 15px !important;
+    flex-wrap: wrap !important;
+}
+
+/* Tombol masing-masing sosial media */
+.footer .footer-social .footer-social-icons a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 48px !important;
+    height: 48px !important;
+
+    min-width: 48px !important;
+    min-height: 48px !important;
+
+    max-width: 48px !important;
+    max-height: 48px !important;
+
+    flex: 0 0 48px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+    text-decoration: none !important;
+}
+
+/* Ukuran SVG WhatsApp, Facebook, Instagram */
+.footer .footer-social .footer-social-icons a svg {
+    display: block !important;
+
+    width: 26px !important;
+    height: 26px !important;
+
+    min-width: 26px !important;
+    min-height: 26px !important;
+
+    max-width: 26px !important;
+    max-height: 26px !important;
+
+    flex: 0 0 26px !important;
+    flex-shrink: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+}
+
+/* HOVER */
+.footer .footer-social .footer-social-icons a:hover {
+    transform: translateY(-3px);
+    color: #e9a3ba;
+}
+
+/* RESPONSIVE MOBILE */
+@media screen and (max-width: 560px) {
+
+    .footer .footer-social .footer-social-icons {
+        gap: 12px !important;
+    }
+
+    .footer .footer-social .footer-social-icons a {
+        width: 44px !important;
+        height: 44px !important;
+
+        min-width: 44px !important;
+        min-height: 44px !important;
+
+        max-width: 44px !important;
+        max-height: 44px !important;
+
+        flex: 0 0 44px !important;
+    }
+
+    .footer .footer-social .footer-social-icons a svg {
+        width: 24px !important;
+        height: 24px !important;
+
+        min-width: 24px !important;
+        min-height: 24px !important;
+
+        max-width: 24px !important;
+        max-height: 24px !important;
+
+        flex: 0 0 24px !important;
+    }
+
+}
