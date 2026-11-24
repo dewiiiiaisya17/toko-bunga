@@ -155,6 +155,9 @@
             }
         }
     </style>
+     <!-- GOOGLE SEARCH CONSOLE -->
+    <meta name="google-site-verification" content="s_5-9UJ5h6UMrP0LM6Sz0sWEsjg0IEr73Dz_gK0-clc" />
+
 
 </head>
 
