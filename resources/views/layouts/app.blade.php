@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  
     <!-- SEO WEBSITE -->
-    <meta name="description" content="Nirwana Florist - Toko Karangan Bunga Terbaik. Kami menyediakan rangkaian bunga segar untuk berbagai momen spesial Anda. Pesan sekarang lewat WhatsApp!">
+    <title>Toko Bunga Klaten, Solo, Sukoharjo & Boyolali | Nirwana Florist</title>
 
-    <meta name="keywords" content="toko bunga, karangan bunga, bouquet, bunga pernikahan, bunga ulang tahun, bunga wisuda, nirwana florist">
+    <meta name="description" content="Nirwana Florist menyediakan papan bunga dan karangan bunga untuk duka cita, wedding, wisuda, dan berbagai acara spesial. Melayani pemesanan dan pengiriman di Klaten, Solo, Sukoharjo, dan Boyolali melalui WhatsApp.">
 
-    <meta property="og:title" content="Nirwana Florist — Bloom With Meaning">
-    <meta property="og:description" content="Rangkaian bunga segar untuk setiap momen spesial Anda. Pesan mudah via WhatsApp!">
+    <meta name="keywords" content="nirwana florist, toko bunga klaten, papan bunga klaten, florist klaten, toko bunga solo, papan bunga solo, toko bunga sukoharjo, papan bunga sukoharjo, toko bunga boyolali, papan bunga boyolali, karangan bunga klaten">
 
-    <title>Nirwana Florist — Bloom With Meaning</title>
+    <meta property="og:title" content="Nirwana Florist - Toko Bunga Klaten, Solo, Sukoharjo & Boyolali">
+
+    <meta property="og:description" content="Pesan papan bunga dan karangan bunga untuk berbagai momen spesial. Melayani Klaten, Solo, Sukoharjo, dan Boyolali.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nirwanafloristklaten.id/">
 
     <!-- FAVICON -->
     <link rel="icon" type="image/jpeg" href="{{ asset('images/logo_nirwana.jpeg') }}">
