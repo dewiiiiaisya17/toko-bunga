@@ -13,7 +13,7 @@
 
             <p class="footer-desc">
                 Toko bunga terpercaya yang menyediakan berbagai
-                pilihan rangkaian bunga segar dan papan bunga elegan.
+                pilihan papan bunga elegan.
                 Kami berkomitmen memberikan kualitas terbaik untuk
                 setiap momen berharga Anda.
             </p>
